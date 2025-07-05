@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SmartFix Solutions</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Hamburger Menu Button (Mobile) -->
+  <div class="hamburger-menu">
+    <button id="hamburgerBtn">&#9776;</button>
+  </div>
+
+  <!-- Slide-Out Numbered Navigation -->
+  <nav class="mobile-nav" id="mobileNav">
+    <ul class="mobile-nav-list">
+      <li><a href="#home"> Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services"> Services</a></li>
+      <li><a href="#pricing"> Pricing</a></li>
+      <li><a href="#testimonials"> Testimonials</a></li>
+      <li><a href="#contact"> Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Header -->
+  <header>
+    <div class="container nav-container">
+      <h1 class="logo">SmartFix</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="home-section">
+    <div class="container">
+      <h2>Welcome to SmartFix Solutions</h2>
+      <p>Your trusted repair partner for phones, laptops, and home appliances.</p>
+      <a href="#services" class="btn">Explore Our Services</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>SmartFix Solutions offers reliable, fast, and affordable repair services for electronics and home appliances. We're committed to excellent customer service and quality repair work.</p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services-section">
+    <div class="container">
+      <h2>Our Services</h2>
+      <ol class="numbered-service-list">
+        <li>Phone Repairs – Cracked screen, battery, and port replacement</li>
+        <li>Laptop Repairs – OS install, keyboard, screen replacement</li>
+        <li>Home Appliance Repairs – Fridge, microwave, etc.</li>
+        <li>Data Recovery – Secure file recovery from damaged devices</li>
+        <li>On-Site Visits – We come to your location</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="pricing-section">
+    <div class="container">
+      <h2>Pricing Plans</h2>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>Basic</h3>
+          <p class="price">KES 500–1,000</p>
+          <ul>
+            <li>Phone Diagnosis</li>
+            <li>Battery Replacement</li>
+          </ul>
+        </div>
+        <div class="pricing-card">
+          <h3>Standard</h3>
+          <p class="price">KES 1,500–3,000</p>
+          <ul>
+            <li>Laptop Fixes</li>
+            <li>System Installation</li>
+          </ul>
+        </div>
+        <div class="pricing-card">
+          <h3>Premium</h3>
+          <p class="price">KES 5,000+</p>
+          <ul>
+            <li>Data Recovery</li>
+            <li>On-site Service</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="testimonials-section">
+    <div class="container">
+      <h2>Testimonials</h2>
+      <blockquote>"Their phone repair service was quick and professional!" – Mary N.</blockquote>
+      <blockquote>"Affordable laptop repair with excellent customer service." – James W.</blockquote>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+<section id="contact" class="contact-section">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <form id="whatsappForm">
+      <label for="name">Your Name:</label><br>
+      <input type="text" id="name" placeholder="Enter your name" required><br><br>
+
+      <label for="email">Your Email:</label><br>
+      <input type="email" id="email" placeholder="Enter your email" required><br><br>
+
+      <label for="message">Your Message:</label><br>
+      <textarea id="message" placeholder="Type your message here..." rows="5" required></textarea><br><br>
+
+      <button type="submit" class="btn">Send via WhatsApp</button>
+    </form>
+
+    <p>Phone: <a href="tel:+254799757915">+254 799 757 915</a></p>
+    
+  </div>
+</section>
+
+<!-- WhatsApp Form Script -->
+<script>
+  // WhatsApp Form Submission
+  document.getElementById("whatsappForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+    const whatsappNumber = "254799757915"; // your number without +
+
+    const text = `Hello, my name is ${name}.\nEmail: ${email}\n\n${message}`;
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+
+    window.open(whatsappURL, "_blank");
+  });
+</script>
